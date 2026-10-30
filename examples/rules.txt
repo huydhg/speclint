@@ -1,0 +1,25 @@
+ID      Mức    Áp dụng       Nội dung
+------------------------------------------------------------------------------
+AC001   error  story,prd     AC không theo cấu trúc Given/When/Then
+AC002   error  story,prd     AC thiếu Then — không có kết quả để kiểm tra
+AC003   warn   story,prd     AC thiếu When — trigger ngầm định
+AC004   info   story,prd     AC thiếu Given — không nêu tiền đề
+AC005   error  story,prd     AC chứa từ không kiểm chứng được
+AC006   warn   story,prd     AC có nhiều hơn một trigger
+AC007   warn   story,prd     AC quá dài
+AC008   warn   story         AC lỗi nhưng không nói người dùng thấy gì
+CV001   warn   story         Không có negative path
+CV002   warn   story         Không có boundary case
+PR001   error  prd           PRD thiếu mục Problem
+PR002   error  prd           Metric thiếu baseline
+PR003   warn   prd           Metric không ghi nguồn số
+PR004   error  prd           Out of scope quá mỏng
+PR005   warn   prd           Không có counter-metric
+PR006   info   prd           Mục Problem có vẻ đang mô tả giải pháp
+QO001   warn   *             Open question không có người chịu trách nhiệm
+ST001   error  story         Thiếu câu user story
+ST002   warn   story         `so that` chỉ nhắc lại `I want`
+ST003   error  story         Không có mục Acceptance criteria
+ST004   error  story         Mục Acceptance criteria rỗng
+ST005   info   story         Thiếu Definition of Done
+LK001   warn   *             Wikilink trỏ tới file không tồn tại

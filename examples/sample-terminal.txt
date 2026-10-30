@@ -1,0 +1,62 @@
+prd-bad.md  điểm 42/100 · hạng D · 6 vấn đề trên 0 AC
+  i gợi ý PR006  Mục Problem có cụm "thêm nút" — kiểm tra xem đang tả vấn đề hay đã nhảy sang giải pháp
+         prd-bad.md:6
+  ! cảnh  PR005  Không khai báo counter-metric
+         prd-bad.md:10
+         → Thứ gì có thể xấu đi khi chỉ số chính đẹp lên? Không có nó thì mọi kết quả đều là thắng lợi.
+  x lỗi   PR002  Metric "Tỷ lệ trả đúng hạn" có baseline rỗng
+         prd-bad.md:14
+         → Không baseline thì sau khi launch không chứng minh được thành công hay thất bại. Chưa có số thì ghi ❓ và đưa vào Open questions.
+  ! cảnh  PR003  Metric "Tỷ lệ trả đúng hạn" không ghi lấy số từ đâu
+         prd-bad.md:14
+         → Ghi nguồn ngay trong ô: *(DB: bảng.cột)*, *(Amplitude: tên event)*
+  x lỗi   PR004  Out of scope chỉ có 1 mục
+         prd-bad.md:16
+         → Phạm vi được định nghĩa bằng thứ bị loại ra. Liệt kê ít nhất 2 thứ stakeholder dễ mặc định là có nhưng thực ra không làm.
+  ! cảnh  QO001  Câu hỏi mở không ghi ai trả lời được
+         prd-bad.md:26
+         → Thêm @Team hoặc @Tên, kèm việc nó đang chặn gì
+
+story-bad.md  điểm 0/100 · hạng D · 7 vấn đề trên 4 AC
+  x lỗi   ST001  Thiếu so that trong câu user story
+         story-bad.md:1
+         → Dạng chuẩn: **As a** <vai trò cụ thể> / **I want** <năng lực> / **so that** <kết quả>
+  i gợi ý ST005  Story không có Definition of Done
+         story-bad.md:1
+  x lỗi   AC001  AC không theo cấu trúc Given/When/Then
+         story-bad.md:11
+         → Given <trạng thái trước> / When <một hành động> / Then <kết quả quan sát được>
+  x lỗi   AC005  AC dùng từ không kiểm chứng được: "đầy đủ"
+         story-bad.md:11
+         → Tester không dự họp phải ra cùng kết luận. Thay bằng điều kiện đo được.
+  x lỗi   AC002  AC thiếu Then — không nêu kết quả nào để tester đối chiếu
+         story-bad.md:12
+  ! cảnh  AC006  AC có 2 mệnh đề When — nên tách thành 2 tiêu chí
+         story-bad.md:13
+         → Một tiêu chí = một trigger. Cần 'and when' nghĩa là đang gộp hai thứ.
+  ! cảnh  AC008  AC mô tả trường hợp lỗi nhưng không nêu thông điệp hoặc hành động tiếp theo
+         story-bad.md:14
+         → Nêu rõ người dùng thấy gì và làm gì tiếp: then hiển thị "..." và nút Thử lại
+
+story-grouped.md  điểm 60/100 · hạng C · 3 vấn đề trên 2 AC
+  ! cảnh  LK001  Wikilink "khong-ton-tai" không trỏ tới file nào trong phạm vi quét
+         story-grouped.md:10
+  ! cảnh  AC003  AC có Then nhưng không có When — chưa rõ điều gì kích hoạt
+         story-grouped.md:15
+         → Tester phải đoán: lúc mở màn hình? lúc bấm nút? Nêu rõ trigger.
+  ! cảnh  AC003  AC có Then nhưng không có When — chưa rõ điều gì kích hoạt
+         story-grouped.md:19
+         → Tester phải đoán: lúc mở màn hình? lúc bấm nút? Nêu rõ trigger.
+
+story-happy-only.md  điểm 73/100 · hạng C · 2 vấn đề trên 2 AC
+  ! cảnh  CV001  Chỉ có happy path — không thấy tiêu chí nào cho trường hợp bị chặn hoặc lỗi
+         story-happy-only.md:12
+         → Thêm ít nhất một AC: điều kiện không thoả, và người dùng được báo gì
+  ! cảnh  CV002  Không thấy tiêu chí nào chạm giá trị biên
+         story-happy-only.md:12
+         → Giới hạn là chỗ hay vỡ nhất: đúng 5 chứ không phải 4 hay 6, danh sách rỗng, độ dài tối đa
+
+Tổng kết
+  8 file · 4 sạch · 6 lỗi · 10 cảnh báo · 2 gợi ý
+  Điểm trung bình: 72/100
+  Hay gặp nhất: AC003 (2× AC thiếu When — trigger ngầm định), PR006 (1× Mục Problem có vẻ đang mô tả giải pháp), PR005 (1× Không có counter-metric)
