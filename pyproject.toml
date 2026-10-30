@@ -20,8 +20,8 @@ dependencies = []
 speclint = "speclint.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/huydoanhg/speclint"
-Issues = "https://github.com/huydoanhg/speclint/issues"
+Homepage = "https://github.com/huydhg/speclint"
+Issues = "https://github.com/huydhg/speclint/issues"
 
 [build-system]
 requires = ["setuptools>=68"]
